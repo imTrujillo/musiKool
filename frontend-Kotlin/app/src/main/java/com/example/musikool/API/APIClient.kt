@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 object APIClient {
-    private const val base_url = "https://lexicological-semestrial-johnathan.ngrok-free.dev/api/"
+    private const val base_url = "https://musikool-api.onrender.com/api/"
 
     fun instance (context: Context): IAPIService {
         val client = OkHttpClient().newBuilder()
