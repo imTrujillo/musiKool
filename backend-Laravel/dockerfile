@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev libicu-dev \
     && docker-php-ext-install xml intl pdo_mysql mbstring zip
 
-# GD para Laravel y Spatie
+# GD
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd
 
@@ -27,12 +27,13 @@ COPY . .
 # Instalar dependencias PHP
 RUN composer install --no-dev --optimize-autoloader
 
+# Generar documentación Scribe
+RUN php artisan scribe:generate
 
-# Permisos si usas storage
-RUN chown -R www-data:www-data storage bootstrap/cache
+# Permisos
+RUN chown -R www-data:www-data storage bootstrap/cache public/docs
 
 EXPOSE 8000
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-CMD ["/entrypoint.sh"]
+# Entrypoint del servidor
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000", "--no-reload"]
