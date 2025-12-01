@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_songs">
+
+    <fragment
+        android:id="@+id/nav_songs"
+        android:name="com.example.musikool.ui.Fragments.songs.SongsFragment"
+        android:label="@string/menu_songs"
+        tools:layout="@layout/fragment_songs" />
+
+    <fragment
+        android:id="@+id/nav_artists"
+        android:name="com.example.musikool.ui.Fragments.artists.ArtistsFragment"
+        android:label="@string/menu_artists"
+        tools:layout="@layout/fragment_artists" />
+
+    <fragment
+        android:id="@+id/nav_genres"
+        android:name="com.example.musikool.ui.Fragments.genres.GenresFragment"
+        android:label="@string/menu_genres"
+        tools:layout="@layout/fragment_genres" />
+
+    <fragment
+        android:id="@+id/nav_chords"
+        android:name="com.example.musikool.ui.Fragments.chords.ChordsFragment"
+        android:label="@string/menu_chords"
+        tools:layout="@layout/fragment_chords" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.musikool.ui.Fragments.about.AboutFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about" />
+
+
+<!--    Fragmentos no accesibles desde el sidebar-->
+    <fragment
+        android:id="@+id/nav_songs_per_entity"
+        android:name="com.example.musikool.ui.Fragments.songs_per_entity.SongsPerEntityFragment"
+        android:label="Entidad"
+        tools:layout="@layout/fragment_songs_per_entity" />
+
+    <fragment
+        android:id="@+id/nav_songs_details"
+        android:name="com.example.musikool.ui.Fragments.song_details.SongDetailsFragment"
+        android:label="Canción"
+        tools:layout="@layout/fragment_song_details" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.musikool.ui.Fragments.profile.ProfileFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_my_songs"
+        android:name="com.example.musikool.ui.Fragments.my_songs.MySongsFragment"
+        android:label="Mis Canciones"
+        tools:layout="@layout/fragment_my_songs" />
+
+    <fragment
+        android:id="@+id/nav_favorites"
+        android:name="com.example.musikool.ui.Fragments.favorites.FavoritesFragment"
+        android:label="Favoritos"
+        tools:layout="@layout/fragment_favorites" />
+
+
+<!--    Modificar items-->
+    <fragment
+        android:id="@+id/nav_modify_song"
+        android:name="com.example.musikool.ui.Fragments.modify_song.ModifySongFragment"
+        android:label="Modificar Canción"
+        tools:layout="@layout/fragment_modify_song" />
+
+    <fragment
+        android:id="@+id/nav_modify_compass"
+        android:name="com.example.musikool.ui.Fragments.modify_compass.ModifyCompassFragment"
+        android:label="Modificar Compás"
+        tools:layout="@layout/fragment_modify_compass" />
+
+    <fragment
+        android:id="@+id/nav_modify_musical_note"
+        android:name="com.example.musikool.ui.Fragments.modify_musical_note.ModifyMusicalNoteFragment"
+        android:label="Modificar Nota Musical"
+        tools:layout="@layout/fragment_modify_musical_note" />
+
+
+</navigation>

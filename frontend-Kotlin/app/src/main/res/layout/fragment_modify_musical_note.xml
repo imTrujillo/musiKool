@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".ui.Fragments.modify_musical_note.ModifyMusicalNoteFragment">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            >
+
+            <TextView
+                android:text="Letra"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edtLyrics"
+                android:hint="La cucaracha ya no puede caminar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_background"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp" />
+
+            <TextView
+                android:text="Acorde"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteChord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Escoge un acorde"
+                android:background="@drawable/input_background"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:inputType="text"
+                android:completionThreshold="1" />
+
+            <TextView
+                android:text="Figura musical"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteFigure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Escoge una figura musical"
+                android:background="@drawable/input_background"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:inputType="text"
+                android:completionThreshold="1" />
+
+            <TextView
+                android:text="¿Tiene puntillo?"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteDotted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Seleccione la opción"
+                android:background="@drawable/input_background"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:inputType="text"
+                android:focusable="false"
+                android:clickable="true"/>
+
+            <TextView
+                android:text="¿Es un silencio?"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteSilence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Seleccione la opción"
+                android:background="@drawable/input_background"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:inputType="text"
+                android:focusable="false"
+                android:clickable="true"/>
+
+            <Button
+                android:id="@+id/btnModifyMusicalNote"
+                android:text="Guardar"
+                android:backgroundTint="#B388FF"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

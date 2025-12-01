@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".ui.Fragments.modify_song.ModifySongFragment">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            >
+
+            <TextView
+                android:text="Detalles de la canción"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp"
+                android:textSize="20dp"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Título"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edtTitle"
+                android:hint="Oda a la Alegría"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_background"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <TextView
+                android:text="BPM"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edtBPM"
+                android:inputType="number"
+                android:hint="118"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_background"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp" />
+
+            <TextView
+                android:text="Género"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteGenre"
+                    android:layout_width="match_parent"
+                    android:hint="Escoge un género"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_background"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:inputType="text"
+                    android:completionThreshold="1" />
+
+            <TextView
+                android:text="Tonalidad"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteScale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Escoge una escala"
+                    android:background="@drawable/input_background"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:inputType="text"
+                    android:completionThreshold="1" />
+
+            <TextView
+                android:text="Métrica"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteMetric"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Selecciona la métrica"
+                    android:background="@drawable/input_background"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:inputType="text"
+                    android:completionThreshold="1" />
+
+            <Button
+                android:id="@+id/btnModifySong"
+                android:text="Guardar"
+                android:backgroundTint="#B388FF"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+
+        <include android:id="@+id/emptyStateContainer"
+            layout="@layout/empty_state"/>
+
+
+            <LinearLayout
+                android:id="@+id/showCompasses"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp">
+                <TextView
+                    android:text="Compases"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="#333333"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/btnAddCompass"
+                    android:text="+ Compás"
+                    android:backgroundTint="#B388FF"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <include android:id="@+id/progressBar"
+                layout="@layout/progress_bar"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/editableCompassesElementsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

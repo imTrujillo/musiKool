@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:elevation="10dp"
+    android:padding="10dp"
+    android:layout_margin="12dp"
+    android:background="@drawable/bg_card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="6dp"
+        android:layout_gravity="center"
+        >
+        <TextView
+            android:id="@+id/txtSongName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Canción"
+            android:textColor="#4A148C"
+            android:ellipsize="end"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/txtSongGenre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Género"
+            android:ellipsize="end"
+            android:textColor="#4A148C"
+            android:textSize="14dp"/>
+        <TextView
+            android:id="@+id/txtSongReviewCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textStyle="bold"
+            android:textColor="#4A148C"
+            android:text="10 Reseñas"
+            android:textSize="12dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="12dp"
+        android:layout_gravity="center"
+        android:gravity="end"
+        >
+        <Button
+            android:id="@+id/btnEdit"
+            android:text="Editar"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:text="Borrar"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/red"
+            android:backgroundTintMode="src_in" />
+
+    </LinearLayout>
+
+</LinearLayout>

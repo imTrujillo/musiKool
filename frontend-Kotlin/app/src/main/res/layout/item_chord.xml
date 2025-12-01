@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="12dp"
+    android:layout_margin="12dp"
+    android:background="@drawable/bg_card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:layout_gravity="center"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="start">
+            <ImageButton
+                android:id="@+id/btnFavorite"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_gravity="end"
+                android:src="@drawable/heart_selector"
+                android:background="@android:color/transparent" />
+            <WebView
+                android:id="@+id/webPlayChord"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                />
+            <TextView
+                android:id="@+id/txtChordName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acorde"
+                android:textColor="#4A148C"
+                android:textSize="16dp"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/txtInstrument"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Piano / Guitarra"
+                android:textColor="#4A148C"
+                android:textSize="14dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/carouselChords"
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:clipToPadding="false"
+            android:padding="4dp"
+            />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

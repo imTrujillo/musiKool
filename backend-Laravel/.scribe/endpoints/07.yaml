@@ -1,0 +1,43 @@
+name: Acordes
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/chords
+    metadata:
+      groupName: Acordes
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Buscar un acorde.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":1,"chord_name":"C","piano_diagram":"https:\/\/www.scales-chords.com\/chord\/piano\/C","guitar_diagram":"https:\/\/www.scales-chords.com\/chord\/guitar\/C","piano_sound":"https:\/\/www.scales-chords.com\/api\/scales-chords-api.js?chord=C&instrument=piano&output=sound","guitar_sound":"https:\/\/www.scales-chords.com\/api\/scales-chords-api.js?chord=C&instrument=guitar&output=sound"},{"id":2,"chord_name":"Cm","piano_diagram":"https:\/\/www.scales-chords.com\/chord\/piano\/Cm","guitar_diagram":"https:\/\/www.scales-chords.com\/chord\/guitar\/Cm","piano_sound":"https:\/\/www.scales-chords.com\/api\/scales-chords-api.js?chord=Cm&instrument=piano&output=sound","guitar_sound":"https:\/\/www.scales-chords.com\/api\/scales-chords-api.js?chord=Cm&instrument=guitar&output=sound"},{"id":3,"chord_name":"Cdim","piano_diagram":"https:\/\/www.scales-chords.com\/chord\/piano\/Cdim","guitar_diagram":"https:\/\/www.scales-chords.com\/chord\/guitar\/Cdim","piano_sound":"https:\/\/www.scales-chords.com\/api\/scales-chords-api.js?chord=Cdim&instrument=piano&output=sound","guitar_sound":"https:\/\/www.scales-chords.com\/api\/scales-chords-api.js?chord=Cdim&instrument=guitar&output=sound"},{"id":4,"chord_name":"Caug","piano_diagram":"https:\/\/www.scales-chords.com\/chord\/piano\/Caug","guitar_diagram":"https:\/\/www.scales-chords.com\/chord\/guitar\/Caug","piano_sound":"https:\/\/www.scales-chords.com\/api\/scales-chords-api.js?chord=Caug&instrument=piano&output=sound","guitar_sound":"https:\/\/www.scales-chords.com\/api\/scales-chords-api.js?chord=Caug&instrument=guitar&output=sound"},{"id":5,"chord_name":"C7","piano_diagram":"https:\/\/www.scales-chords.com\/chord\/piano\/C7","guitar_diagram":"https:\/\/www.scales-chords.com\/chord\/guitar\/C7","piano_sound":"https:\/\/www.scales-chords.com\/api\/scales-chords-api.js?chord=C7&instrument=piano&output=sound","guitar_sound":"https:\/\/www.scales-chords.com\/api\/scales-chords-api.js?chord=C7&instrument=guitar&output=sound"}],"links":{"first":"http:\/\/127.0.0.1:8000\/api\/chords?page=1","last":"http:\/\/127.0.0.1:8000\/api\/chords?page=54","prev":null,"next":"http:\/\/127.0.0.1:8000\/api\/chords?page=2"},"meta":{"current_page":1,"from":1,"last_page":54,"links":[{"url":null,"label":"&laquo; Previous","page":null,"active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/chords?page=1","label":"1","page":1,"active":true},{"url":"http:\/\/127.0.0.1:8000\/api\/chords?page=2","label":"2","page":2,"active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/chords?page=3","label":"3","page":3,"active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/chords?page=4","label":"4","page":4,"active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/chords?page=5","label":"5","page":5,"active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/chords?page=6","label":"6","page":6,"active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/chords?page=7","label":"7","page":7,"active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/chords?page=8","label":"8","page":8,"active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/chords?page=9","label":"9","page":9,"active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/chords?page=10","label":"10","page":10,"active":false},{"url":null,"label":"...","active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/chords?page=53","label":"53","page":53,"active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/chords?page=54","label":"54","page":54,"active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/chords?page=2","label":"Next &raquo;","page":2,"active":false}],"path":"http:\/\/127.0.0.1:8000\/api\/chords","per_page":5,"to":5,"total":270}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

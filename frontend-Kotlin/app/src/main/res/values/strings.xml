@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">musiKool</string>
+    <string name="navigation_drawer_open">Abrir</string>
+    <string name="navigation_drawer_close">Cerrar</string>
+    <string name="nav_header_title">MusiKool</string>
+    <string name="nav_header_subtitle">Música, Canciones y Acordes</string>
+    <string name="nav_header_desc">Categorías</string>
+    <string name="action_settings">Ajustes</string>
+
+    <string name="menu_songs">Canciones</string>
+    <string name="menu_artists">Artistas</string>
+    <string name="menu_genres">Géneros</string>
+    <string name="menu_chords">Acordes</string>
+    <string name="menu_about">Acerca de</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--    FRAGMENTO ABOUT-->
+    <string name="app_name_full">Musikool: Canciones y Acordes</string>
+
+    <string name="about_app_description">
+        Musikool es una aplicación educativa disruptiva enfocada en el aprendizaje autónomo de instrumentos musicales,
+        específicamente piano y guitarra. Nuestro objetivo es optimizar el proceso formativo,
+        proporcionando recursos esenciales como técnicas de digitación, acordes, escalas y progresiones armónicas.
+        Fomentamos una comunidad de colaboración para el desarrollo de tus habilidades.
+    </string>
+
+    <string name="about_how_to_use">
+    <b> Explora:</b> Navega por las secciones <b>Canciones</b>, <b>Artistas</b> y <b>Géneros</b> para encontrar material de práctica.
+    \n\n<b> Aprende Acordes:</b> Consulta la sección <b>Acordes</b> para ver diagramas, digitaciones y teoría musical aplicada.
+    \n\n<b> Colabora:</b> Si inicias sesión, podrás publicar y evaluar canciones, aportando activamente a nuestra base de conocimiento musical.
+</string>
+    <string name="about_creators_list">
+        Abel Fabricio Diaz Hollman
+        \nJosé Manuel González Martínez
+        \nLuis Mario Martínez Pérez
+        \nJosué Mauricio Melara Hernández
+        \nSteven Josué Trujillo Cuéllar
+        \nErnesto Alejandro Zavaleta Alemán
+    </string>
+</resources>

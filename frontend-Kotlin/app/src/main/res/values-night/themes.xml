@@ -1,0 +1,18 @@
+ <resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+     <style name="Theme.MusiKool" parent="Theme.MaterialComponents.Light">
+         <item name="android:windowLightStatusBar">true</item>
+
+         <!-- Primary brand color. -->
+         <item name="colorPrimary">#6750A4</item>
+         <item name="colorPrimaryVariant">#472C7A</item>
+         <item name="colorOnPrimary">#301D38</item>
+         <!-- Secondary brand color. -->
+         <item name="colorSecondary">#413D47</item>
+         <item name="colorSecondaryVariant">#27252A</item>
+         <item name="colorOnSecondary">#45414D</item>
+         <!-- Status bar color. -->
+         <item name="android:statusBarColor">#B592C3</item>
+         <!-- Customize your theme here. -->
+     </style>
+</resources>

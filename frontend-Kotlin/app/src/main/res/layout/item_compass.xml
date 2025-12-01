@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:elevation="10dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_card">
+
+    <TextView
+        android:id="@+id/txtCompassOrder"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:textColor="@color/purple_700"
+        android:layout_gravity="center_vertical"
+        android:text="1" />
+
+
+    <TextView
+        android:id="@+id/txtEmptyStateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="14dp"
+        android:textColor="@color/purple_500"
+        android:text="Letra no disponible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/musicalNotesList"
+        android:overScrollMode="always"
+        android:scrollbars="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</LinearLayout>

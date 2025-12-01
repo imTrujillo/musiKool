@@ -1,0 +1,38 @@
+# Imagen base PHP + FPM
+FROM php:8.2-fpm
+
+# Instalar dependencias del sistema
+RUN apt-get update && apt-get install -y \
+    git curl unzip libpng-dev libjpeg-dev libfreetype6-dev \
+    libonig-dev libzip-dev zip \
+    libxml2-dev libicu-dev \
+    && docker-php-ext-install xml intl pdo_mysql mbstring zip
+
+# GD para Laravel y Spatie
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install gd
+
+# Fileinfo
+RUN docker-php-ext-install fileinfo
+
+# Instalar Composer
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+# Configurar directorio del proyecto
+WORKDIR /var/www/html
+
+# Copiar código de Laravel API
+COPY . .
+
+# Instalar dependencias PHP
+RUN composer install --no-dev --optimize-autoloader
+
+
+# Permisos si usas storage
+RUN chown -R www-data:www-data storage bootstrap/cache
+
+EXPOSE 8000
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+CMD ["/entrypoint.sh"]

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".ui.Fragments.my_songs.MySongsFragment">
+
+
+        <include android:id="@+id/progressBar"
+            layout="@layout/progress_bar"/>
+
+        <include android:id="@+id/emptyStateContainer"
+            layout="@layout/empty_state"/>
+
+        <Button
+            android:id="@+id/btnAddSong"
+            android:text="+ Canción"
+            android:backgroundTint="#B388FF"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/songElementsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp" />
+
+        <include
+            android:id="@+id/paginationLayout"
+            layout="@layout/pagination"
+            />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

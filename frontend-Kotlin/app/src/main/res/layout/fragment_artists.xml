@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ui.Fragments.artists.ArtistsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_toolbar"
+        android:gravity="center"
+        android:paddingHorizontal="4dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        >
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:hint="Empieza aquí..."
+            android:background="@null"
+            />
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="⌕"
+            style="@style/TextOnlyButton"/>
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="28dp"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text="✖"
+            style="@style/TextOnlyButton"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="12dp">
+        <Button
+            android:id="@+id/btnLatest"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="👀 Reciente"
+            android:layout_marginEnd="4dp"
+            style="@style/FilterButton"
+            />
+        <Button
+            android:id="@+id/btnMostSongs"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="🎶 Más Canciones"
+            android:layout_marginEnd="4dp"
+            style="@style/FilterButton"
+            />
+    </LinearLayout>
+
+
+    <include android:id="@+id/progressBar"
+        layout="@layout/progress_bar"/>
+
+    <include android:id="@+id/emptyStateContainer"
+        layout="@layout/empty_state"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/artistElementsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"/>
+
+    <include
+        android:id="@+id/paginationLayout"
+        layout="@layout/pagination"
+        />
+
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>

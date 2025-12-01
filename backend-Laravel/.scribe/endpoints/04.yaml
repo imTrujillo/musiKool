@@ -1,0 +1,454 @@
+name: 'Notas Musicales'
+description: |-
+
+  Endpoints para administrar las notas musicales dentro de una compás.
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: 'api/songs/{song_id}/compasses/{compass_id}/musicalNotes'
+    metadata:
+      groupName: 'Notas Musicales'
+      groupDescription: |-
+
+        Endpoints para administrar las notas musicales dentro de una compás.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Mostrar notas musicales.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      song_id:
+        name: song_id
+        description: 'The ID of the song.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      compass_id:
+        name: compass_id
+        description: 'The ID of the compass.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      song_id: 1
+      compass_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/songs/{song_id}/compasses/{compass_id}/musicalNotes'
+    metadata:
+      groupName: 'Notas Musicales'
+      groupDescription: |-
+
+        Endpoints para administrar las notas musicales dentro de una compás.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Añadir un nueva nota musical.'
+      description: ''
+      authenticated: true
+      deprecated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      song_id:
+        name: song_id
+        description: 'The ID of the song.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      compass_id:
+        name: compass_id
+        description: 'The ID of the compass.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      song_id: 1
+      compass_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      chord_id:
+        name: chord_id
+        description: 'The <code>id</code> of an existing record in the chords table.'
+        required: true
+        example: 17
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      lyrics:
+        name: lyrics
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: mqeopfuudtdsufvyvddqa
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      is_dotted:
+        name: is_dotted
+        description: ''
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      is_silence:
+        name: is_silence
+        description: ''
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      rhythmic_figure_id:
+        name: rhythmic_figure_id
+        description: 'The <code>id</code> of an existing record in the rhythmic_figures table.'
+        required: true
+        example: 17
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      chord_id: 17
+      lyrics: mqeopfuudtdsufvyvddqa
+      is_dotted: true
+      is_silence: false
+      rhythmic_figure_id: 17
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|tutokenfakegeneradoporSanctum'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/songs/{song_id}/compasses/{compass_id}/musicalNotes/{id}'
+    metadata:
+      groupName: 'Notas Musicales'
+      groupDescription: |-
+
+        Endpoints para administrar las notas musicales dentro de una compás.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Mostrar una nota musical.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      song_id:
+        name: song_id
+        description: 'The ID of the song.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      compass_id:
+        name: compass_id
+        description: 'The ID of the compass.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      id:
+        name: id
+        description: 'The ID of the musicalNote.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      song_id: 1
+      compass_id: 1
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/songs/{song_id}/compasses/{compass_id}/musicalNotes/{id}'
+    metadata:
+      groupName: 'Notas Musicales'
+      groupDescription: |-
+
+        Endpoints para administrar las notas musicales dentro de una compás.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Actualizar una nota.'
+      description: ''
+      authenticated: true
+      deprecated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      song_id:
+        name: song_id
+        description: 'The ID of the song.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      compass_id:
+        name: compass_id
+        description: 'The ID of the compass.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      id:
+        name: id
+        description: 'The ID of the musicalNote.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      song_id: 1
+      compass_id: 1
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      chord_id:
+        name: chord_id
+        description: 'The <code>id</code> of an existing record in the chords table.'
+        required: true
+        example: 17
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      lyrics:
+        name: lyrics
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: mqeopfuudtdsufvyvddqa
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      is_dotted:
+        name: is_dotted
+        description: ''
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      is_silence:
+        name: is_silence
+        description: ''
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      rhythmic_figure_id:
+        name: rhythmic_figure_id
+        description: 'The <code>id</code> of an existing record in the rhythmic_figures table.'
+        required: true
+        example: 17
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      chord_id: 17
+      lyrics: mqeopfuudtdsufvyvddqa
+      is_dotted: true
+      is_silence: true
+      rhythmic_figure_id: 17
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|tutokenfakegeneradoporSanctum'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/songs/{song_id}/compasses/{compass_id}/musicalNotes/{id}'
+    metadata:
+      groupName: 'Notas Musicales'
+      groupDescription: |-
+
+        Endpoints para administrar las notas musicales dentro de una compás.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Eliminar una nota musical.'
+      description: ''
+      authenticated: true
+      deprecated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      song_id:
+        name: song_id
+        description: 'The ID of the song.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      compass_id:
+        name: compass_id
+        description: 'The ID of the compass.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      id:
+        name: id
+        description: 'The ID of the musicalNote.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      song_id: 1
+      compass_id: 1
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|tutokenfakegeneradoporSanctum'
+    controller: null
+    method: null
+    route: null
+    custom: []

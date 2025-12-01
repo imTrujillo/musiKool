@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:elevation="10dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_card">
+
+    <TextView
+        android:id="@+id/txtCompassOrder"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:textColor="@color/purple_700"
+        android:layout_gravity="center_vertical"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/txtEmptyStateTitle"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="14dp"
+        android:textColor="@color/purple_500"
+        android:text="Letra no disponible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/musicalNotesList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:overScrollMode="always"
+        android:scrollbars="horizontal" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="12dp"
+        android:layout_gravity="center"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:text="+ Nota"
+            android:backgroundTint="#B388FF"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:text="Editar"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:text="Borrar"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/red"
+            android:backgroundTintMode="src_in" />
+
+    </LinearLayout>
+
+</LinearLayout>

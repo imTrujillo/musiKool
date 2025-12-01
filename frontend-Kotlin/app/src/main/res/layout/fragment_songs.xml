@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ui.Fragments.songs.SongsFragment">
+
+    <LinearLayout
+        android:id="@+id/layoutSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_toolbar"
+        android:gravity="center"
+        android:paddingHorizontal="4dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone"
+        >
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:hint="Empieza aquí..."
+            android:background="@null"
+            />
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="⌕"
+            style="@style/TextOnlyButton"/>
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="28dp"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text="✖"
+            style="@style/TextOnlyButton"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone">
+        <Button
+            android:id="@+id/btnLatest"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="👀 Reciente"
+            android:layout_marginEnd="4dp"
+            style="@style/FilterButton"
+            />
+        <Button
+            android:id="@+id/btnPopular"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="🤟 Popular"
+            android:layout_marginEnd="4dp"
+            style="@style/FilterButton"
+            />
+        <Button
+            android:id="@+id/btnRating"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="⭐ Rating"
+            style="@style/FilterButton"
+            />
+    </LinearLayout>
+
+     <!--    Card de artista-->
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardArtist"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        card_view:cardCornerRadius="12dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        card_view:cardElevation="6dp">
+
+            <!-- 🔹 Línea superior decorativa -->
+            <View
+                android:id="@+id/viewUserColorLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="4dp"
+                android:background="@color/purple_200" />
+
+            <!-- 🔹 Contenido de la tarjeta -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="12dp">
+
+                    <ImageButton
+                        android:id="@+id/btnArtistFavorite"
+                        android:layout_width="40dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/heart_selector"
+                        android:background="@android:color/transparent" />
+
+                    <TextView
+                        android:id="@+id/txtUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Artista"
+                        android:textColor="#4A148C"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:ellipsize="end"
+                        android:maxLines="1" />
+
+                    <TextView
+                        android:id="@+id/txtUserSongsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="10 Canciones"
+                        android:textColor="#6A1B9A"
+                        android:textSize="14sp"
+                        android:ellipsize="end"
+                        android:maxLines="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="¡Descubre su discografía!"
+                        android:textAlignment="center"/>
+                </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!--    Card de Género-->
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardGenre"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        card_view:cardCornerRadius="12dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        card_view:cardElevation="6dp">
+
+        <!-- 🔹 Línea superior decorativa -->
+        <View
+            android:id="@+id/viewGenreColorLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="4dp"
+            android:background="@color/purple_200" />
+
+        <!-- 🔹 Contenido de la tarjeta -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/txtGenreName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Género"
+                    android:textColor="#4A148C"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:ellipsize="end"
+                    android:maxLines="1" />
+
+                <TextView
+                    android:id="@+id/txtGenreSongsCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 Canciones"
+                    android:textColor="#6A1B9A"
+                    android:textSize="14sp"
+                    android:ellipsize="end"
+                    android:maxLines="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="¡Descubre clásicos del género!"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <include android:id="@+id/progressBar"
+        layout="@layout/progress_bar"/>
+
+    <include android:id="@+id/emptyStateContainer"
+        layout="@layout/empty_state"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/songElementsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp" />
+
+    <include
+        android:id="@+id/paginationLayout"
+        layout="@layout/pagination"
+        />
+
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>

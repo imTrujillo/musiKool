@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="8dp"
+    android:layout_gravity="center"
+    >
+    <TextView
+        android:id="@+id/txtChord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acorde"
+        android:textColor="#4A148C"
+        android:ellipsize="end"
+        android:textSize="13dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/txtSongLyrics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="10dp"
+        android:text="Letra"
+        android:ellipsize="end"
+        android:textColor="#4A148C"
+        android:textSize="16dp"/>
+
+    <ImageButton
+        android:id="@+id/btnNoteEdit"
+        android:src="@drawable/ic_edit"
+        android:padding="6dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:scaleType="fitCenter"
+        style="@style/TextOnlyButton"
+        android:backgroundTint="@android:color/transparent" />
+
+    <ImageButton
+        android:id="@+id/btnNoteDelete"
+        android:src="@drawable/ic_trash"
+        android:padding="6dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:scaleType="fitCenter"
+        style="@style/TextOnlyButton"
+        android:backgroundTint="@android:color/transparent" />
+
+
+</LinearLayout>

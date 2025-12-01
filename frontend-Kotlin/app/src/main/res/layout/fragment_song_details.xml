@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_weight="0"/>
+
+    <include
+        android:id="@+id/progressBar"
+        layout="@layout/progress_bar" />
+
+    <include
+        android:id="@+id/emptyStateContainer"
+        layout="@layout/empty_state" />
+
+    <LinearLayout
+        android:id="@+id/layout_fragment_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".ui.Fragments.song_details.SongDetailsFragment">
+
+
+        <!--    Card general-->
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardArtist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="0dp"
+            card_view:cardCornerRadius="12dp"
+            card_view:cardElevation="6dp">
+
+
+            <!-- 🔹 Línea superior decorativa -->
+            <View
+                android:id="@+id/viewUserColorLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:background="@color/purple_200" />
+
+            <!-- 🔹 Contenido de la tarjeta -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtSongName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:text="Canción"
+                    android:textColor="#4A148C"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:text="Artista"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/purple_500"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <!--    Card de la canción -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 🔹 Línea superior decorativa -->
+                <View
+                    android:id="@+id/viewGenreColorLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="14dp"
+                    android:background="@color/purple_200" />
+
+                <!-- 🔹 Contenido de la tarjeta -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="-10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtSongGenre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:text="Género"
+                            android:textColor="#4A148C"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:divider="@color/purple_700"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:showDividers="middle">
+
+                            <TextView
+                                android:id="@+id/txtSongScale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:text="Tonalidad"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:id="@+id/txtSongMetric"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:text="Métrica"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:id="@+id/txtSongBPM"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="4dp"
+                                android:text="Tiempo"
+                                android:textAlignment="center" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/edtSongBPM"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Ajusta velocidad"
+                        android:textColor="#6A1B9A"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Compases, Acordes y Letras"
+                        android:textColor="#4A148C"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <include
+                        android:id="@+id/compassProgressBar"
+                        layout="@layout/progress_bar" />
+
+                    <include
+                        android:id="@+id/compassEmptyStateContainer"
+                        layout="@layout/empty_state" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/compassesList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        android:padding="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/reviews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="¿Qué te pareció?"
+            android:textColor="@color/purple_500"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            >
+            <ImageView
+                android:id="@+id/star1"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_star_border"
+                android:scaleType="fitCenter"/>
+            <ImageView
+                android:id="@+id/star2"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_star_border"
+                android:scaleType="fitCenter"/>
+            <ImageView
+                android:id="@+id/star3"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_star_border"
+                android:scaleType="fitCenter"/>
+            <ImageView
+                android:id="@+id/star4"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_star_border"
+                android:scaleType="fitCenter"/>
+            <ImageView
+                android:id="@+id/star5"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_star_border"
+                android:scaleType="fitCenter"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnReview"
+            android:text="Calificar"
+            android:backgroundTint="#B388FF"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        >
+
+
+
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextOnlyButton"
+            android:textSize="30dp"
+            android:padding="10dp"
+            android:text="▶️" />
+
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextOnlyButton"
+            android:padding="10dp"
+            android:textSize="30dp"
+            android:text="⏹" />
+
+    </LinearLayout>
+
+</FrameLayout>
+
+
+

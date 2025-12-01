@@ -1,0 +1,322 @@
+name: Artistas
+description: |-
+
+  Endpoints para administrar los artistas.
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/users
+    metadata:
+      groupName: Artistas
+      groupDescription: |-
+
+        Endpoints para administrar los artistas.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Guardar un artista.'
+      description: ''
+      authenticated: true
+      deprecated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must be at least 5 characters. Must not be greater than 20 characters.'
+        required: true
+        example: vmqeopfuudtdsufvy
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: dcarter@example.org
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'Must match the regex /[a-z]/. Must match the regex /[A-Z]/. Must match the regex /[0-9]/. Must be at least 8 characters.'
+        required: false
+        example: OP>@;4
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      color:
+        name: color
+        description: 'Must match the regex /^#(?:[0-9a-fA-F]{3}){1,2}$/.'
+        required: true
+        example: '#:4AB'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: vmqeopfuudtdsufvy
+      email: dcarter@example.org
+      password: OP>@;4
+      color: '#:4AB'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|tutokenfakegeneradoporSanctum'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'api/users/{id}'
+    metadata:
+      groupName: Artistas
+      groupDescription: |-
+
+        Endpoints para administrar los artistas.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Actualizar un artista.'
+      description: ''
+      authenticated: true
+      deprecated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Must be at least 5 characters. Must not be greater than 20 characters.'
+        required: true
+        example: vmqeopfuudtdsufvy
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: dcarter@example.org
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'Must match the regex /[a-z]/. Must match the regex /[A-Z]/. Must match the regex /[0-9]/. Must be at least 8 characters.'
+        required: false
+        example: OP>@;4
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      color:
+        name: color
+        description: 'Must match the regex /^#(?:[0-9a-fA-F]{3}){1,2}$/.'
+        required: true
+        example: '#:4AB'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: vmqeopfuudtdsufvy
+      email: dcarter@example.org
+      password: OP>@;4
+      color: '#:4AB'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|tutokenfakegeneradoporSanctum'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/users/{id}'
+    metadata:
+      groupName: Artistas
+      groupDescription: |-
+
+        Endpoints para administrar los artistas.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Eliminar un artista.'
+      description: ''
+      authenticated: true
+      deprecated: false
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|tutokenfakegeneradoporSanctum'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/users
+    metadata:
+      groupName: Artistas
+      groupDescription: |-
+
+        Endpoints para administrar los artistas.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Obtener artistas.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"id":2,"name":"Ambrose Emmerich","email":"bailey.luisa@example.net","email_verified_at":"2025-09-19T03:13:09.000000Z","color":"#c0c62f","is_admin":false,"created_at":null,"updated_at":null,"songs_count":1},{"id":3,"name":"Alison Wolff","email":"weber.corene@example.org","email_verified_at":"2025-09-19T03:13:09.000000Z","color":"#9e866a","is_admin":false,"created_at":null,"updated_at":null,"songs_count":0},{"id":4,"name":"Dr. Martine Berge I","email":"devin98@example.com","email_verified_at":"2025-09-19T03:13:09.000000Z","color":"#544192","is_admin":false,"created_at":null,"updated_at":null,"songs_count":2},{"id":5,"name":"Bonita Turcotte","email":"sheridan70@example.org","email_verified_at":"2025-09-19T03:13:09.000000Z","color":"#8ea19d","is_admin":false,"created_at":null,"updated_at":null,"songs_count":0},{"id":1,"name":"Admin Mellara","email":"admin@admin.com","email_verified_at":"2025-09-19T03:13:09.000000Z","color":"#111826","is_admin":true,"created_at":null,"updated_at":null,"songs_count":2}],"links":{"first":"http:\/\/127.0.0.1:8000\/api\/users?page=1","last":"http:\/\/127.0.0.1:8000\/api\/users?page=3","prev":null,"next":"http:\/\/127.0.0.1:8000\/api\/users?page=2"},"meta":{"current_page":1,"from":1,"last_page":3,"links":[{"url":null,"label":"&laquo; Previous","page":null,"active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/users?page=1","label":"1","page":1,"active":true},{"url":"http:\/\/127.0.0.1:8000\/api\/users?page=2","label":"2","page":2,"active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/users?page=3","label":"3","page":3,"active":false},{"url":"http:\/\/127.0.0.1:8000\/api\/users?page=2","label":"Next &raquo;","page":2,"active":false}],"path":"http:\/\/127.0.0.1:8000\/api\/users","per_page":5,"to":5,"total":11}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/users/{id}'
+    metadata:
+      groupName: Artistas
+      groupDescription: |-
+
+        Endpoints para administrar los artistas.
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Mostrar un artista.'
+      description: ''
+      authenticated: false
+      deprecated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the user.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"id":1,"name":"Admin Mellara","email":"admin@admin.com","email_verified_at":"2025-09-19T03:13:09.000000Z","color":"#111826","is_admin":true,"created_at":null,"updated_at":null}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
