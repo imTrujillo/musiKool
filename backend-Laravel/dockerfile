@@ -27,13 +27,18 @@ COPY . .
 # Instalar dependencias PHP
 RUN composer install --no-dev --optimize-autoloader
 
-# Generar documentación Scribe
-RUN php artisan scribe:generate
+# Generar documentación Scribe (si falla, no rompe el build)
+RUN php artisan scribe:generate || true
 
-# Permisos
-RUN chown -R www-data:www-data storage bootstrap/cache public/docs
+# Crear carpetas necesarias y asignar permisos
+RUN mkdir -p storage bootstrap/cache public/docs \
+    && chown -R www-data:www-data storage bootstrap/cache public/docs
 
 EXPOSE 8000
 
-# Entrypoint del servidor
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000", "--no-reload"]
+# Copiar entrypoint
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+# Usar entrypoint
+ENTRYPOINT ["/entrypoint.sh"]

@@ -1,11 +1,13 @@
 #!/bin/sh
 
+# Limpiar caches antes de iniciar
 php artisan config:clear
 php artisan cache:clear
 php artisan route:clear
-
-# Limpiar las caches antes de iniciar el servidor
 php artisan optimize:clear
-php artisan permission:cache-reset
 
-php artisan serve --host=0.0.0.0 --port=8000
+# Si usas spatie/laravel-permission
+php artisan permission:cache-reset || true
+
+# Arrancar servidor
+exec php artisan serve --host=0.0.0.0 --port=8000 --no-reload
