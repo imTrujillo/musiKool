@@ -1,6 +1,6 @@
 # 🎵 musiKool – App de Aprendizaje Musical (Kotlin + Laravel API)
 
-<img src="https://musikool-api.onrender.com/logo.png" width="200" alt="Logo del proyecto">
+<img src="https://musikool-api.onrender.com/logo.png" width="300" alt="Logo del proyecto">
 
 musiKool es una aplicación móvil desarrollada en Kotlin que permite a músicos autodidactas aprender piano y guitarra a través de teoría musical aplicada, canciones estructuradas y herramientas de apoyo.
 
@@ -118,7 +118,7 @@ php artisan serve
 
 ## 🌐 Despliegue
 
-Backend → Render → https://musikool-api.onrender.com/docs
-Frontend → APK → https://drive.google.com/file/d/1oc020zaQmXvJQEwbNpfBkc6v1BI0am3h/view?usp=sharing
-Base de datos → Railway
+- Backend → Render → https://musikool-api.onrender.com/docs
+- Frontend → APK → https://drive.google.com/file/d/1oc020zaQmXvJQEwbNpfBkc6v1BI0am3h/view?usp=sharing
+- Base de datos → Railway
 
