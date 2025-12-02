@@ -10,7 +10,7 @@ El backend está construido en Laravel, ofreciendo un API REST completo para ges
 
 ## 🎯 Objetivo del Proyecto
 
-![App](https://musikool-api.onrender.com/screenshots/3.jpg)
+<img src="https://musikool-api.onrender.com/screenshots/3.jpg" width="350" alt="App">
 
 - Desarrollar una aplicación educativa que facilite el aprendizaje autónomo del piano y la guitarra, reduciendo las barreras que enfrentan músicos principiantes sin un instructor.
 
@@ -26,7 +26,7 @@ El backend está construido en Laravel, ofreciendo un API REST completo para ges
 
 ## 🚀 Características Principales
 
-![App](https://musikool-api.onrender.com/screenshots/1.jpg)
+<img src="https://musikool-api.onrender.com/screenshots/1.jpg" width="350" alt="App">
 
 ### 🎶 Para los usuarios:
 - Repositorio amplio de canciones.
@@ -35,7 +35,7 @@ El backend está construido en Laravel, ofreciendo un API REST completo para ges
 - Favoritos personalizados.
 - Sistema de reseñas por canción.
 
-![teoria](https://musikool-api.onrender.com/screenshots/2.jpg)
+<img src="https://musikool-api.onrender.com/screenshots/2.jpg" width="350" alt="Teoria">
 
 ### 🎼 Teoría musical integrada:
 - Figuras rítmicas.
@@ -48,7 +48,7 @@ El backend está construido en Laravel, ofreciendo un API REST completo para ges
 
 ## 🛠️ Tecnologías Utilizadas
 
-![frontend](https://musikool-api.onrender.com/screenshots/4.jpg)
+<img src="https://musikool-api.onrender.com/screenshots/4.jpg" width="350" alt="frontend">
 
 ### Frontend (App móvil)
 - Kotlin (Android Studio)
@@ -122,3 +122,13 @@ php artisan serve
 - Frontend → APK → https://drive.google.com/file/d/1oc020zaQmXvJQEwbNpfBkc6v1BI0am3h/view?usp=sharing
 - Base de datos → Railway
 
+---
+
+## 👥 Creadores
+
+1. Abel Díaz → https://github.com/Abel270
+2. José González
+3. Luis Martínez → https://github.com/BlckXI
+4. Josué Melara → https://github.com/JosuMelara21
+5. Steven Trujillo → https://github.com/imTrujillo
+6. Ernesto Zavaleta
