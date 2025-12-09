@@ -127,8 +127,8 @@ php artisan serve
 ## 👥 Creadores
 
 1. Abel Díaz → https://github.com/Abel270
-2. José González
+2. José González → https://github.com/jose76s
 3. Luis Martínez → https://github.com/BlckXI
 4. Josué Melara → https://github.com/JosuMelara21
 5. Steven Trujillo → https://github.com/imTrujillo
-6. Ernesto Zavaleta
+6. Ernesto Zavaleta → https://github.com/lIlIIIIIIllllI
